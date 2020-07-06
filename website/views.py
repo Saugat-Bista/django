@@ -102,6 +102,8 @@ def divide(request):
     num_2 = randint(1,10)
     while num_1%num_2 != int:
         num_2 = randint(1,10)
+        if num_1%num_2 == 0:
+            break
 
     if request.method == "POST":
         answer = request.POST['answer']
